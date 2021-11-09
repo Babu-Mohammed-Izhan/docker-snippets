@@ -1,75 +1,75 @@
 # Docker-Snippets
 
-## Docker Run Image
+  ## Docker Run Image
 
-`docker container run <CONTAINER NAME>`
+    `docker container run <CONTAINER NAME>`
 
-## List Containers
+  ## List Containers
 
-`docker container ls -a`
+    `docker container ls -a`
 
-## List Images 
+  ## List Images 
 
-`docker image ls`
+    `docker image ls`
 
-## Start Container
+  ## Start Container
 
-`docker start <CONTAINER NAME>`
+    `docker start <CONTAINER NAME>`
 
-## Kill Container
+  ## Kill Container
 
-`docker kill <CONTAINER NAME>`
+    `docker kill <CONTAINER NAME>`
 
-## Start Container in Interactive Mode
+  ## Start Container in Interactive Mode
 
-`docker start -i <CONTAINER NAME>`
+    `docker start -i <CONTAINER NAME>`
 
-## DockerFile Example
+  ## DockerFile Example
 
-```
-FROM node:16
+    ```
+    FROM node:16
 
-WORKDIR /usr/src/app
+    WORKDIR /usr/src/app
 
-COPY . .
+    COPY . .
 
-RUN npm ci
+    RUN npm ci
 
-CMD npm start
+    CMD npm start
 
-```
+    ```
 
-## Build Image using dockerfile
+  ## Build Image using dockerfile
 
-`docker build -t <CONTAINER NAME> . `
+    `docker build -t <CONTAINER NAME> . `
 
-## Docker Compose File Example
+  ## Docker Compose File Example
 
-```
-version: '3.8'            # Version 3.8 is quite new and should work
+    ```
+    version: '3.8'            # Version 3.8 is quite new and should work
 
-services:
-  app:                    # The name of the service, can be anything
-    image: express-server # Declares which image to use
-    build: .              # Declares where to build if image is not found
-    ports:                # Declares the ports to publish
-      - 3000:3000
-      
-```
+    services:
+      app:                    # The name of the service, can be anything
+        image: express-server # Declares which image to use
+        build: .              # Declares where to build if image is not found
+        ports:                # Declares the ports to publish
+          - 3000:3000
 
-## Docker compose Build and Run Application
+    ```
 
-` docker-compose up `
+  ## Docker compose Build and Run Application
 
-## Docker compose Rebuild Application
+    `docker-compose up `
 
-`docker-compose up --build`
+  ## Docker compose Rebuild Application
 
-## Docker compose Run Application in the background
+    `docker-compose up --build`
 
-`docker-compose up -d`
+  ## Docker compose Run Application in the background
 
-## Docker compose Close Application
+    `docker-compose up -d`
 
-`docker-compose down`
+  ## Docker compose Close Application
+
+    `docker-compose down`
 
