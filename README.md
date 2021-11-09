@@ -31,8 +31,45 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
-COPY ./index.js ./index.js
+COPY . .
 
-CMD node index.js
+RUN npm ci
+
+CMD npm start
+
 ```
+
+## Build Image using dockerfile
+
+`docker build -t <CONTAINER NAME> . `
+
+## Docker Compose File Example
+
+```
+version: '3.8'            # Version 3.8 is quite new and should work
+
+services:
+  app:                    # The name of the service, can be anything
+    image: express-server # Declares which image to use
+    build: .              # Declares where to build if image is not found
+    ports:                # Declares the ports to publish
+      - 3000:3000
+      
+```
+
+## Docker compose Build and Run Application
+
+` docker-compose up `
+
+## Docker compose Rebuild Application
+
+`docker-compose up --build`
+
+## Docker compose Run Application in the background
+
+`docker-compose up -d`
+
+## Docker compose Close Application
+
+`docker-compose down`
 
