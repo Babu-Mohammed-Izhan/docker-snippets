@@ -2,35 +2,34 @@
 
   ## Docker Run Image
 
-    `docker container run <CONTAINER NAME>`
+    docker container run <CONTAINER NAME>
 
   ## List Containers
 
-    `docker container ls -a`
+    docker container ls -a
 
   ## List Images 
 
-    `docker image ls`
+    docker image ls
 
   ## Start Container
 
-    `docker start <CONTAINER NAME>`
+    docker start <CONTAINER NAME>
     
   ## Run Container on PORT 3000
   
-  `docker run -dp 3000:3000 <CONTAINER NAME>`
+    docker run -dp 3000:3000 <CONTAINER NAME>
 
   ## Kill Container
 
-    `docker kill <CONTAINER NAME>`
+    docker kill <CONTAINER NAME>
 
   ## Start Container in Interactive Mode
 
-    `docker start -i <CONTAINER NAME>`
+    docker start -i <CONTAINER NAME>
 
   ## DockerFile Example
 
-    ```
     FROM node:16
 
     WORKDIR /usr/src/app
@@ -40,16 +39,14 @@
     RUN npm ci
 
     CMD npm start
-
-    ```
+    
 
   ## Build Image using dockerfile
 
-    `docker build -t <CONTAINER NAME> . `
+    docker build -t <CONTAINER NAME> .
 
   ## Docker Compose File Example
 
-    ```
     version: '3.8'            # Version 3.8 is quite new and should work
 
     services:
@@ -59,21 +56,19 @@
         ports:                # Declares the ports to publish
           - 3000:3000
 
-    ```
-
   ## Docker compose Build and Run Application
 
-    `docker-compose up `
+    docker-compose up
 
   ## Docker compose Rebuild Application
 
-    `docker-compose up --build`
+    docker-compose up --build
 
   ## Docker compose Run Application in the background
 
-    `docker-compose up -d`
+    docker-compose up -d
 
   ## Docker compose Close Application
 
-    `docker-compose down`
+    docker-compose down
 
