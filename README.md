@@ -15,6 +15,10 @@
   ## Start Container
 
     `docker start <CONTAINER NAME>`
+    
+  ## Run Container on PORT 3000
+  
+  `docker run -dp 3000:3000 <CONTAINER NAME>`
 
   ## Kill Container
 
