@@ -16,6 +16,10 @@
 
     docker start <CONTAINER NAME>
     
+   ## Start Container in Interactive Mode
+
+    docker start -i <CONTAINER NAME>
+    
   ## Run Container on PORT 3000
   
     docker run -dp 3000:3000 <CONTAINER NAME>
@@ -24,10 +28,22 @@
 
     docker kill <CONTAINER NAME>
 
-  ## Start Container in Interactive Mode
+  ## Remove Container
+  
+    docker rm <CONTAINER NAME>
+    
+  ## Login to Docker Hub
+  
+    docker login -u <username>
+  
+  ## Change Tag Name
 
-    docker start -i <CONTAINER NAME>
-
+    docker tag <IMAGE NAME> <username>/<NEW IMAGE NAME>
+    
+  ## Push Image to DockerHub
+  
+    docker push <username>/<IMAGE NAME>
+    
   ## DockerFile Example
 
     FROM node:16
@@ -71,4 +87,3 @@
   ## Docker compose Close Application
 
     docker-compose down
-
